@@ -1,3 +1,10 @@
+# Readme plan deprecated in favor of Miro wireframe - if Miro wireframe is not a complete replacement for this text-based plan, please let me know.
+
+## [Miro wireframe](https://miro.com/app/board/uXjVO6UBZaA=/)
+
+## [Netlify app](https://profound-lamington-59f411.netlify.app/)
+
+
 #HTML Elements
 * (shell image, ball, button) for each shell
 * spans for win count, loss count, total
