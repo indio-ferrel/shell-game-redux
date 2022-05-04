@@ -85,7 +85,7 @@ button2.addEventListener('click', () => {
         feedbackSpan.textContent = 'No, the ball is over here.';
     } else {
         shell1.classList.add('shellUp');
-        ball1classList.add('reveal');
+        ball1.classList.add('reveal');
         losses++;
         feedbackSpan.textContent = 'No, the ball is over here.';
     }
