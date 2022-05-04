@@ -47,7 +47,7 @@ button1.addEventListener('click', () => {
         shell1.classList.add('shellUp');
         ball1.classList.add('reveal');
         wins++;
-        feedbackSpan.textContent = 'Yes, the ball is here!';
+        feedbackSpan.textContent = 'Yes, the ball is there!';
     } else if (randomShell === 2) {
         shell2.classList.add('shellUp');
         ball2.classList.add('reveal');
@@ -61,6 +61,65 @@ button1.addEventListener('click', () => {
     }
     trackStats();
     setTimeout(() => {
+        reset();
+    }, '3000');
+});
+
+button2.addEventListener('click', () => {
+    // reset shells and ball in case user hasn't waited for timeout
     reset();
+    // decide which shell the ball is under
+    const randomShell = Math.ceil(Math.random() * 3);
+     // if randomShell = 2, increment wins
+     // else, increment losses
+     // show where ball was
+    if (randomShell === 2) {
+        shell2.classList.add('shellUp');
+        ball2.classList.add('reveal');
+        wins++;
+        feedbackSpan.textContent = 'Yes, the ball is there!';
+    } else if (randomShell === 3) {
+        shell3.classList.add('shellUp');
+        ball3.classList.add('reveal');
+        losses++;
+        feedbackSpan.textContent = 'No, the ball is over here.';
+    } else {
+        shell1.classList.add('shellUp');
+        ball1.classList.add('reveal');
+        losses++;
+        feedbackSpan.textContent = 'No, the ball is over here.';
+    }
+    trackStats();
+    setTimeout(() => {
+        reset();
+    }, '3000');
+});
+
+button3.addEventListener('click', () => {
+    // reset shells and ball in case user hasn't waited for timeout
+    reset();
+    // decide which shell the ball is under
+    const randomShell = Math.ceil(Math.random() * 3);
+     // if randomShell = 3, increment wins
+     // else, increment losses
+    if (randomShell === 3) {
+        shell3.classList.add('shellUp');
+        ball3.classList.add('reveal');
+        wins++;
+        feedbackSpan.textContent = 'Yes, the ball is there!';
+    } else if (randomShell === 1) {
+        shell1.classList.add('shellUp');
+        ball1.classList.add('reveal');
+        losses++;
+        feedbackSpan.textContent = 'No, the ball is over here.';
+    } else {
+        shell2.classList.add('shellUp');
+        ball2.classList.add('reveal');
+        losses++;
+        feedbackSpan.textContent = 'No, the ball is over here.';
+    }
+    trackStats();
+    setTimeout(() => {
+        reset();
     }, '3000');
 });
